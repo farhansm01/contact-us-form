@@ -1,3 +1,12 @@
+:root {
+  --color-primary-dark: rgb(83, 7, 83);
+  --color-primary-light: purple;
+  --color-background-light: #fff;
+  --color-background-page: rgb(249, 227, 252);
+  --color-text-muted: #998b9b;
+  --color-separator: #ddcbe2;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,51 +17,103 @@
 main {
   width: 100vw;
   height: 100vh;
-  /* background: rebeccapurple; */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(249, 227, 252);
+  background-color: var(--color-background-page);
 }
 
 .container {
+  max-width: 70%;
   display: flex;
   gap: 5rem;
-  background-color: #fff;
+  background-color: var(--color-background-light);
   padding: 3.125rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
 .icons {
   text-align: center;
   margin-bottom: 1.875rem;
 }
+
 .icons i {
-  color: purple;
+  color: var(--color-primary-light);
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
 }
 
 .icons h3 {
   font-size: 1.2rem;
-  color: rgb(83, 7, 83);
+  color: var(--color-primary-dark);
   margin-bottom: 0.2rem;
 }
 
 .icons p {
   font-size: 1rem;
-  color: #998b9b;
+  color: var(--color-text-muted);
   line-height: 1.3;
 }
+
 .left {
   position: relative;
 }
+
 .left::after {
   content: "";
   position: absolute;
   width: 1.5px;
   height: 70%;
-  background-color: #ddcbe2;
-  right: -30px;
+  background-color: var(--color-separator);
+  right: -1.875rem;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/* right part */
+
+.right {
+  width: 65%;
+}
+
+.right h1 {
+  color: var(--color-primary-dark);
+  font-size: 1.5rem;
+}
+
+.right p {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.3;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.right input {
+  display: block;
+  width: 100%;
+  background-color: rgb(221, 214, 221);
+  padding: 0.9rem 0.625rem;
+  margin-bottom: 0.6rem;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.right textarea {
+  border-radius: 0.2rem;
+  width: 100%;
+  background-color: rgb(221, 214, 221);
+  padding: 0.625rem;
+  border: none;
+  margin-bottom: 0.6rem;
+  resize: none;
+}
+
+.right button {
+  font-size: 0.8rem;
+  background-color: var(--color-primary-dark);
+  color: var(--color-background-light);
+  padding: 0.625rem 0.625rem;
+  border-radius: 0.3rem;
 }
