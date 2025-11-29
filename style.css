@@ -117,3 +117,109 @@ main {
   padding: 0.625rem 0.625rem;
   border-radius: 0.3rem;
 }
+
+@media (max-width: 950px) {
+  main {
+    height: auto; /* let it expand based on content */
+    padding: 1rem 0; /* optional vertical padding */
+  }
+  .container {
+    flex-direction: column-reverse;
+    padding: 2rem;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+  }
+  .left::after {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  main {
+    height: auto; /* let it expand based on content */
+    padding: 1rem 0; /* optional vertical padding */
+  }
+  .left {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    height: auto; /* let it expand based on content */
+    padding: 1rem 0; /* optional vertical padding */
+  }
+  .container {
+    padding: 1rem;
+  }
+  .icons p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 470px) {
+  main {
+    height: auto; /* let it expand based on content */
+    padding: 1rem 0; /* optional vertical padding */
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    padding: 1rem; /* reduce padding for small screens */
+  }
+
+  .right h1 {
+    font-size: 1.3rem; /* shrink text a bit */
+  }
+
+  .right p {
+    font-size: 0.9rem;
+  }
+
+  .right input,
+  .right textarea {
+    padding: 0.5rem; /* smaller input height */
+  }
+
+  .icons i {
+    font-size: 1.5rem;
+  }
+
+  .icons h3,
+  .icons p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .icons i {
+    font-size: 1rem;
+  }
+  .icons h3,
+  .icons p {
+    font-size: 0.7rem;
+  }
+
+  .right h1 {
+    font-size: 1rem; /* shrink text a bit */
+  }
+
+  .right p,
+  .right input,
+  .right textarea,
+  .right button {
+    font-size: 0.7rem;
+    padding: 0.5rem; /* smaller input height */
+  }
+}
